@@ -1,0 +1,9 @@
+<nav>
+  <ul>
+    <li><a routerLink="/js">JavaScript</a></li>
+    <li><a routerLink="/html">HTML</a></li>
+    <li><a routerLink="/css">CSS</a></li>
+    <li *ngIf="!api.loggedIn"><a routerLink="/login">Login</a></li>
+    <li *ngIf="api.loggedIn" (click)="logout()"><a>Logout</a></li>
+  </ul>
+</nav>

@@ -1,0 +1,9 @@
+#container {
+  border-radius: 25px;
+  margin: 20px;
+  padding: 20px;
+}
+
+p {
+  font-size: 0.9em;
+}

@@ -1,0 +1,48 @@
+#postcore {
+  padding: 20px;
+  background-color: var(--darkest);
+  border: 2px dotted var(--red);
+  border-bottom: none;
+}
+
+#postcore:last-child {
+  border-bottom: 2px dotted var(--dark);
+}
+
+i {
+  color: var(--red);
+}
+
+span {
+  color: var(--red);
+  font-size: 0.5em;
+}
+h2 {
+  cursor: pointer;
+}
+
+h2:hover {
+  color: grey;
+}
+
+button {
+  padding: 10px;
+  background-color: var(--dark);
+  color: var(--lightest);
+  border: 2px var(--red) solid;
+  border-radius: 15px;
+  margin: 10px 0;
+}
+
+button:hover {
+  background-color: var(--light);
+}
+
+p {
+  margin: 10px 0;
+  word-break: break-all;
+  white-space: normal;
+}
+textarea {
+  color: var(--dark);
+}

@@ -1,0 +1,18 @@
+nav {
+  padding: 15px;
+  background-color: var(--darkest);
+  height: 100vh;
+}
+
+button {
+  padding: 10px;
+  margin: 10px 0;
+  background-color: var(--dark);
+  color: var(--lightest);
+  border: 2px var(--red) solid;
+  border-radius: 15px;
+}
+
+button:hover {
+  background-color: var(--light);
+}

@@ -1,0 +1,79 @@
+#container {
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+main {
+  grid-column: 2;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: var(--darkest);
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px;
+}
+#buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px;
+  background-color: var(--dark);
+  color: var(--lightest);
+  border: 2px var(--red) solid;
+  border-radius: 15px;
+}
+
+button:hover {
+  background-color: var(--light);
+}
+
+h2 {
+  color: var(--lightest);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+label {
+  color: var(--lightest);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+input {
+  margin-bottom: 10px;
+  background-color: var(--lightest);
+  color: var(--dark);
+  border: var(--red) 2px solid;
+}
+
+p {
+  color: var(--red);
+  font-size: 1.2rem;
+}
+
+textarea {
+  color: var(--dark);
+  background-color: var(--lightest);
+  margin-bottom: 15px;
+}
+
+option {
+  color: var(--dark);
+}
+
+select {
+  color: var(--dark);
+  background-color: var(--lightest);
+  margin-bottom: 15px;
+}
+
+span {
+  margin-top: 15px;
+}

@@ -1,0 +1,5 @@
+<header>
+  <h1><a routerLink="/landing">Web Dev Beginner Forum</a></h1>
+  <p *ngIf="api.currentUser">Logged in as: {{ api.currentUser.name }}</p>
+  <app-nav></app-nav>
+</header>

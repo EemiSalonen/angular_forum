@@ -1,0 +1,34 @@
+<main>
+  <div @fade id="postcore" *ngFor="let post of posts">
+    <h2 (click)="openForumItem(post.id)">
+      {{ post.title }}
+      <span>
+        <i>posted by {{ getAuthor(post.poster) }}</i>
+      </span>
+    </h2>
+    <div *ngIf="currentlyOpen === post.id" id="content">
+      <p @contentanimation>{{ post.content }}</p>
+
+      <button (click)="openResponses(post.id)">Show responses</button>
+      <div
+        id="responses"
+        *ngIf="responsesOpen === post.id"
+        [@slide-in]="post.responses.length"
+      >
+        <div id="response" *ngFor="let response of post.responses">
+          <h5>Response by: {{ getAuthor(response.poster) }}</h5>
+          <p>{{ response.content }}</p>
+        </div>
+        <button (click)="openResponseTextArea()">Add response</button>
+        <div id="responsetextarea" *ngIf="showResponseText">
+          <form #f="ngForm" (ngSubmit)="submitResponse(post, f.value)">
+            <textarea #content="ngModel" ngModel name="content"></textarea>
+            <div>
+              <button type="submit">Submit response</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

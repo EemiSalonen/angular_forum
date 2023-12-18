@@ -1,0 +1,57 @@
+#container {
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+#cards {
+  display: flex;
+  flex-direction: row;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-color: var(--dark);
+  border-right: 5px var(--red) solid;
+  border-left: 5px var(--red) solid;
+}
+
+#landingtext {
+  grid-row: 2;
+  grid-column: 2;
+  background-color: var(--dark);
+  height: 100vh;
+  padding: 35px;
+  border-top: 5px var(--red) solid;
+  border-right: 5px var(--red) solid;
+  border-left: 5px var(--red) solid;
+}
+#center {
+  border-left: 5px var(--red) solid;
+  border-right: 5px var(--red) solid;
+}
+
+h2 {
+  color: var(--lightest);
+}
+
+p {
+  color: var(--lightest);
+}
+app-card {
+  width: 33%;
+  cursor: pointer;
+  font-size: 1em;
+  transition: font-size 200ms;
+}
+
+app-card:first-child:hover {
+  background-image: url('../../assets/htmlcard.jpg');
+  font-size: 1.5em;
+}
+app-card:nth-child(2):hover {
+  background-image: url('../../assets/csscard.jpg');
+  font-size: 1.5em;
+}
+app-card:last-child:hover {
+  background-image: url('../../assets/jscard.jpg');
+  font-size: 1.5em;
+}

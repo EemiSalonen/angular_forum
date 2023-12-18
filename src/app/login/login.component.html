@@ -1,0 +1,45 @@
+<div id="container">
+  <main @fade>
+    <div id="login">
+      <h2>Login</h2>
+      <form #f="ngForm" (ngSubmit)="login(f.value, f.valid)" novalidate>
+        <label for="username">Username</label>
+        <input
+          type="text"
+          name="username"
+          ngModel
+          #username="ngModel"
+          required
+        />
+        <p
+          [hidden]="
+            !f.form.hasError('required', 'username') || username.pristine
+          "
+        >
+          Username required!
+        </p>
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          ngModel
+          #password="ngModel"
+          required
+        />
+        <p
+          [hidden]="
+            !f.form.hasError('required', 'password') || password.pristine
+          "
+        >
+          Password required!
+        </p>
+        <div id="buttons">
+          <button type="submit">Submit</button>
+          <button routerLink="/register">Not registered? Click here!</button>
+        </div>
+        <p *ngIf="formNotValid">Password and username required!</p>
+        <span *ngIf="loggedIn">Login successfull!</span>
+      </form>
+    </div>
+  </main>
+</div>

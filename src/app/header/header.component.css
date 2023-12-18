@@ -1,0 +1,38 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--darkest);
+  border-bottom: 5px solid var(--red);
+}
+h1 {
+  padding: 15px;
+  color: var(--lightest);
+}
+a {
+  text-decoration: none;
+  color: var(--lightest);
+}
+a:link {
+  text-decoration: none;
+  color: var(--lightest);
+}
+
+a:visited {
+  text-decoration: none;
+  color: var(--lightest);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--lightest);
+}
+
+a:active {
+  text-decoration: none;
+  color: var(--lightest);
+}
+p {
+  color: var(--lightest);
+  font-size: 1.5em;
+}

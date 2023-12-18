@@ -1,0 +1,34 @@
+<div id="container">
+  <main @fade>
+    <form #f="ngForm" (ngSubmit)="submitPost(f.value, f.valid)">
+      <h2>Publish post</h2>
+
+      <label for="title">Post title</label>
+      <input type="text" name="title" ngModel required #title="ngModel" />
+      <p [hidden]="!f.form.hasError('required', 'title') || title.pristine">
+        Title is required!
+      </p>
+
+      <label for="content">Content</label>
+      <textarea
+        name="content"
+        type="text"
+        ngModel
+        #content="ngModel"
+      ></textarea>
+      <p *ngIf="formNotValid && !f.valid">Cannot submit without a title!</p>
+
+      <label for="subject">Choose forum subject</label>
+      <select name="subject" [(ngModel)]="ngSelect" #subject="ngModel">
+        <option value="1">JavaScript</option>
+        <option value="2">HTML</option>
+        <option value="3">CSS</option>
+      </select>
+      <button type="submit">Submit</button>
+
+      <span *ngIf="postCreated"
+        >Post successfully created! You will automatically redirected!</span
+      >
+    </form>
+  </main>
+</div>

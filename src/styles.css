@@ -1,0 +1,20 @@
+:root {
+  --red: #d74a49;
+  --darkest: #183e4b;
+  --dark: #1b4552;
+  --light: #8ba0a4;
+  --lightest: #eaeaea;
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: var(--lightest);
+}
+html {
+  background-color: var(--light);
+}
+
+button {
+  cursor: pointer;
+}
